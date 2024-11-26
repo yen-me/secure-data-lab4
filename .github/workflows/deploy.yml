@@ -2,8 +2,7 @@ name: Deploy Workflow
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   build:
@@ -11,7 +10,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Print API Key
       run: echo "API_KEY=$API_KEY"
